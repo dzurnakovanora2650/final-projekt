@@ -1,0 +1,445 @@
+/* =========================================
+   Turistická informačná kancelária Lienka
+   Primárna farba: #8B0000 (tmavo červená)
+   ========================================= */
+
+
+/* --- CSS premenné --- */
+
+:root {
+  --color-primary:      #8B0000;
+  --color-primary-dark: #6b0000;
+  --color-accent:       #c0392b;
+  --color-light-bg:     #f5eeea;
+  --color-text:         #2c2c2c;
+  --color-footer-bg:    #8B0000;
+  --color-footer-text:  #f5c6c6;
+  --transition-speed:   0.3s;
+}
+
+
+/* --- Základné štýly --- */
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #faf8f5;
+  color: var(--color-text);
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease;
+}
+
+
+/* =========================================
+   DARK MODE — trieda .dark na <body>
+   ========================================= */
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #e8e8e8;
+}
+
+body.dark .custom-header {
+  background-color: #2c0000;
+}
+
+body.dark .custom-nav {
+  background-color: #3a0000;
+}
+
+body.dark .custom-footer {
+  background-color: #2c0000;
+}
+
+body.dark .section-heading {
+  color: #f5c6c6;
+  border-color: #f5c6c6;
+}
+
+body.dark .bg-light {
+  background-color: #2a2a2a !important;
+  color: #e8e8e8;
+}
+
+body.dark .bg-light h3,
+body.dark .bg-light h4 {
+  color: #f5c6c6;
+}
+
+body.dark .bg-light p,
+body.dark .bg-light li {
+  color: #cccccc;
+}
+
+body.dark .bg-light a {
+  color: #f5c6c6;
+}
+
+body.dark .bg-light a:hover {
+  color: #ffffff;
+}
+
+body.dark fieldset {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark legend {
+  color: #f5c6c6;
+}
+
+body.dark .form-control {
+  background-color: #333;
+  color: #e8e8e8;
+  border-color: #555;
+}
+
+body.dark .form-control::placeholder {
+  color: #aaa;
+}
+
+body.dark .list-group-item {
+  background-color: #2a2a2a;
+  color: #e8e8e8;
+  border-color: #444;
+}
+
+body.dark .list-group-item a {
+  color: #f5c6c6;
+}
+
+body.dark .table {
+  color: #e8e8e8;
+}
+
+body.dark .table td,
+body.dark .table th {
+  border-color: #444;
+}
+
+body.dark .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #2a2a2a;
+}
+
+body.dark .table-striped tbody tr:nth-of-type(even) {
+  background-color: #222;
+}
+
+body.dark .char-counter {
+  color: #aaa;
+}
+
+body.dark .rezervacia-detail {
+  background-color: #2c1a1a;
+  border-color: #f5c6c6;
+}
+
+body.dark .card {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #e8e8e8;
+}
+
+body.dark .card-footer {
+  background-color: #222;
+  border-color: #444;
+}
+
+body.dark .accordion-item {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark .accordion-button {
+  background-color: #333;
+  color: #e8e8e8;
+}
+
+body.dark .accordion-button:not(.collapsed) {
+  background-color: #3a1a1a;
+  color: #f5c6c6;
+}
+
+body.dark .accordion-body {
+  background-color: #2a2a2a;
+  color: #cccccc;
+}
+
+
+/* --- Header --- */
+
+.custom-header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.custom-header p {
+  color: #f5c6c6;
+  font-style: italic;
+}
+
+
+/* --- Navbar --- */
+
+.custom-nav {
+  background-color: var(--color-primary-dark);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.custom-nav-link {
+  color: #f5c6c6 !important;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-speed) ease;
+}
+
+.custom-nav-link:hover {
+  color: #ffffff !important;
+}
+
+
+/* --- Carousel --- */
+
+.carousel-img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-text-bg {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+
+/* --- Section headings --- */
+
+.section-heading {
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+  display: inline-block;
+  padding-bottom: 6px;
+  transition: color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
+}
+
+
+/* --- Fieldset --- */
+
+fieldset {
+  border: 1px solid #e0d6cc;
+  border-radius: 6px;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  transition: background-color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
+}
+
+legend {
+  float: none;
+  width: auto;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.required-star {
+  color: var(--color-primary);
+}
+
+
+/* --- Form control --- */
+
+.form-control {
+  border: 2px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.2s ease,
+              background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  outline: none;
+}
+
+.form-control:valid {
+  border-color: #198754;
+}
+
+.form-control:not(:focus):not(:placeholder-shown):invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+
+/* --- Character counter --- */
+
+.char-counter {
+  font-size: 0.82rem;
+  color: #666;
+  text-align: right;
+  transition: color var(--transition-speed) ease;
+}
+
+.char-counter.warning {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+
+/* --- Reservation detail --- */
+
+.rezervacia-detail {
+  background-color: var(--color-light-bg);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 4px;
+  padding: 16px;
+  transition: background-color var(--transition-speed) ease;
+}
+
+
+/* --- Trip cards — hover efekt --- */
+
+.trip-card {
+  transition: transform var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+  cursor: pointer;
+}
+
+.trip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18) !important;
+}
+
+
+/* --- Odznak Tip/Novinka --- */
+
+.badge-novinka {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 10;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+/* --- Card price --- */
+
+.card-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 0;
+}
+
+
+/* --- Menu items (list) --- */
+
+.menu-item.hidden {
+  display: none;
+}
+
+.service-item.hidden {
+  display: none;
+}
+
+
+/* --- Buttons --- */
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.3);
+}
+
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+
+/* --- Checkbox --- */
+
+.form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+
+/* --- Table header --- */
+
+.custom-table-head {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+
+/* --- Modal header --- */
+
+.custom-modal-header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+
+/* --- Accordion --- */
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--color-light-bg);
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.25);
+}
+
+
+/* --- Footer --- */
+
+.custom-footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  transition: background-color var(--transition-speed) ease;
+}
+
+
+/* --- fadeIn animácia --- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease both;
+}
